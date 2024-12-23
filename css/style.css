@@ -1,0 +1,346 @@
+/* Modern Black & Yellow Theme */
+:root {
+    --primary-color: #111111;     /* Near black */
+    --secondary-color: #ffd700;   /* Yellow */
+    --accent-color: #ffeb3b;      /* Light yellow */
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --background-color: #f8f8f8;
+    --error-color: #ff3d00;
+    --success-color: #4caf50;
+    
+    /* Badge Colors */
+    --badge-beginner: #4caf50;
+    --badge-intermediate: #2196f3;
+    --badge-advanced: #9c27b0;
+    --badge-cqb: #f44336;
+    --badge-milsim: #607d8b;
+    --badge-woodland: #2e7d32;
+    --badge-speedsoft: #ffd700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--secondary-color);
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* Card Styles */
+.registration-form,
+.storage-demo,
+.user-table {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s ease;
+}
+
+.registration-form:hover,
+.storage-demo:hover,
+.user-table:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+}
+
+/* Radio and Checkbox Groups */
+.checkbox-group,
+.radio-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.checkbox-item,
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--secondary-color);
+}
+
+/* Button Styles */
+.btn {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--text-dark);
+    transform: translateY(-1px);
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+/* Table Styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.table th {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.table tr:hover {
+    background-color: rgba(255, 215, 0, 0.05);
+}
+
+/* Badge Styles */
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin: 2px 4px 2px 0;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+}
+
+/* Experience Badges */
+.badge.beginner { 
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border-color: #2e7d32;
+}
+.badge.intermediate { 
+    background-color: #e3f2fd;
+    color: #1565c0;
+    border-color: #1565c0;
+}
+.badge.advanced { 
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+    border-color: #7b1fa2;
+}
+
+/* Game Type Badges */
+.badge.cqb { 
+    background-color: #ffebee;
+    color: #c62828;
+    border-color: #c62828;
+}
+.badge.milsim { 
+    background-color: #eceff1;
+    color: #37474f;
+    border-color: #37474f;
+}
+.badge.woodland { 
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    border-color: #1b5e20;
+}
+.badge.speedsoft {
+    background-color: #fff8e1;
+    color: #f57f17;
+    border-color: #f57f17;
+}
+
+/* Message Styles */
+.success-message {
+    background-color: var(--success-color);
+    color: white;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.error {
+    color: var(--error-color);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Storage Demo Styles */
+.storage-demo {
+    margin: 30px 0;
+}
+
+.demo-section {
+    margin-bottom: 25px;
+}
+
+.demo-section h3 {
+    margin-bottom: 15px;
+    color: var(--text-dark);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 8px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.display-box {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    min-height: 40px;
+    background-color: var(--background-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .header {
+        padding: 40px 0;
+    }
+    
+    .header h1 {
+        font-size: 2em;
+    }
+    
+    .checkbox-group,
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .storage-demo,
+    .btn {
+        display: none;
+    }
+    
+    .container {
+        padding: 0;
+    }
+    
+    .registration-form,
+    .user-table {
+        box-shadow: none;
+        margin: 0;
+        padding: 20px 0;
+    }
+    
+    .table th {
+        background: none;
+        color: black;
+        border-bottom: 2px solid black;
+    }
+}

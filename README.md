@@ -1,59 +1,60 @@
-Bagian 1: Client-side Programming
-1.1 Manipulasi DOM dengan JavaScript
-Form HTML
+# Form Handling and Data Management Project
 
-Formulir input memiliki elemen:
-Teks (contoh: username dan email).
-Checkbox (gameTypes[]).
-Radio button (experience).
-Tampilkan Data dari Server ke Tabel HTML
+## Deskripsi Proyek
+Proyek ini merupakan implementasi sistem manajemen data berbasis web yang mencakup pemrograman sisi klien (Client-side), pemrograman sisi server (Server-side), pengelolaan basis data, dan manajemen state aplikasi menggunakan session, cookie, dan browser storage.
 
-Fungsi loadMembers menggunakan fetch untuk mengambil data dari server via php/get_members.php dan menampilkan data dalam tabel HTML dinamis.
-Bukti implementasi: Fungsi ini membuat tabel dengan data anggota, seperti callsign, email, pengalaman, jenis permainan, browser, dan alamat IP.
-Manipulasi DOM
+---
 
-Manipulasi dilakukan untuk menampilkan pesan error jika validasi gagal, atau menampilkan data dari server di tabel HTML (kode dalam file script.js).
-1.2 Event Handling
-Event Handling
-Submit Form: Validasi dilakukan dengan event listener untuk mencegah pengiriman form jika data tidak valid (lihat submit handler pada form).
-Cookie Management: Fungsi setCookie, getCookie, dan deleteCookie menangani event cookie. Misalnya, nilai cookie ditampilkan setiap kali diatur.
-Local Storage: Fungsi saveToLocalStorage, showFromLocalStorage, dan clearLocalStorage menangani penyimpanan dan penghapusan data dalam penyimpanan lokal browser.
-Form Validation
-Validasi JavaScript pada file script.js memastikan:
-Username memiliki minimal 3 karakter.
-Email memiliki format yang valid.
-Radio button dan checkbox dipilih sebelum form dikirim.
-Bagian 2: Server-side Programming
-2.1 Pengelolaan Data dengan PHP
-Metode POST: Form dikirimkan ke process.php untuk diproses.
-Validasi di Server:
-process.php melakukan parsing variabel global POST, validasi data, dan menyimpan data yang valid ke database (contoh: callsign, email, jenis permainan).
-Simpan Browser & IP:
-Data browser dan IP pengguna disimpan menggunakan header PHP (contoh: $_SERVER['HTTP_USER_AGENT'] dan $_SERVER['REMOTE_ADDR']).
-2.2 Objek PHP Berbasis OOP
-Class Mahasiswa:
-Contoh metode:
-save() untuk menyimpan data mahasiswa ke database.
-fetchAll() untuk mengambil semua data mahasiswa.
-Bagian 3: Database Management
-3.1 Pembuatan Tabel Database
-Tabel untuk menyimpan data anggota dibuat (contoh: CREATE TABLE members (...)).
-3.2 Konfigurasi Koneksi Database
-File config.php berisi koneksi ke database MySQL dengan PDO.
-3.3 Manipulasi Data pada Database
-Fungsi OOP (Class Mahasiswa) digunakan untuk:
-Menyimpan data ke tabel (via save()).
-Mengambil data dari tabel (via fetchAll()).
-Bagian 4: State Management
-4.1 State Management dengan Session
-session_start() digunakan di process.php untuk menyimpan informasi pengguna dalam session.
-4.2 Pengelolaan State dengan Cookie dan Browser Storage
-Cookie:
+## Fitur Utama
 
-Fungsi setCookie, getCookie, dan deleteCookie di script.js menangani manipulasi cookie.
-Demo cookie: demoKey.
-Browser Storage:
+### 1. Client-side Programming
+- **Form Input dengan Validasi**
+  - Memiliki elemen input seperti teks, radio button, dan checkbox.
+  - Validasi dilakukan menggunakan JavaScript untuk memastikan:
+    - Callsign minimal 3 karakter.
+    - Email valid sesuai format.
+    - Radio button dan checkbox dipilih sebelum pengiriman form.
+  - Pesan error ditampilkan jika validasi gagal.
 
-Penyimpanan callsign menggunakan Local Storage:
-Simpan dengan saveToLocalStorage.
-Hapus dengan clearLocalStorage.
+- **Event Handling**
+  - Submit form dengan validasi.
+  - Pengelolaan cookie menggunakan JavaScript (set, get, delete).
+  - Penyimpanan data secara lokal menggunakan Local Storage.
+
+- **Manipulasi DOM**
+  - Menampilkan data dari server ke tabel HTML dinamis menggunakan `fetch`.
+
+### 2. Server-side Programming
+- **Pengelolaan Data dengan PHP**
+  - Formulir menggunakan metode POST untuk mengirim data.
+  - Data yang diterima divalidasi sebelum disimpan ke basis data.
+  - Informasi browser dan alamat IP pengguna disimpan ke database.
+
+- **Objek PHP Berbasis OOP**
+  - Kelas PHP (contoh: `Class Mahasiswa`) digunakan untuk:
+    - Menyimpan data ke database.
+    - Mengambil data dari database untuk ditampilkan ke pengguna.
+
+### 3. Database Management
+- **Pembuatan Tabel Database**
+  - Struktur tabel mendukung penyimpanan callsign, email, pengalaman, jenis permainan, browser, dan alamat IP pengguna.
+  
+- **Koneksi Database**
+  - File `config.php` mengatur koneksi database menggunakan PDO.
+
+- **Manipulasi Data**
+  - Menyimpan dan mengambil data menggunakan metode OOP dalam PHP.
+
+### 4. State Management
+- **Session**
+  - Informasi pengguna disimpan menggunakan `$_SESSION` di server.
+  
+- **Cookie**
+  - Cookie dikelola untuk menyimpan informasi pengguna di sisi klien.
+  
+- **Browser Storage**
+  - Local Storage digunakan untuk menyimpan data pengguna seperti callsign.
+
+---
+
+## Struktur Proyek

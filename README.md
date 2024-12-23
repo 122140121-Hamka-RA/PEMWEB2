@@ -1,4 +1,4 @@
-## 1. Form Input
+## Form Input
 
 Form input terdiri dari minimal empat elemen input: teks, checkbox, radio button, dan dropdown. Berikut adalah contoh kode HTML untuk form input:
 
@@ -33,7 +33,7 @@ Form input terdiri dari minimal empat elemen input: teks, checkbox, radio button
 
 ```
 
-### 2. Manipulasi DOM dengan JavaScript
+### Manipulasi DOM dengan JavaScript
 
 ```markdown
 ## 2. Manipulasi DOM dengan JavaScript
@@ -62,7 +62,7 @@ document.querySelector('form').addEventListener('submit', function(e) {
 
 ```
 
-### 3. Event Handling
+### Event Handling
 
 ```markdown
 ## 3. Event Handling
@@ -95,7 +95,7 @@ document.getElementById('nama').addEventListener('change', function() {
 });
 
 ```
-### 5. Penggunaan PHP Berbasis OOP
+### Penggunaan PHP Berbasis OOP
 
 ```markdown
 ## 5. Penggunaan PHP Berbasis OOP
@@ -126,7 +126,7 @@ class Mahasiswa {
 
 ```
 
-### 6. Pengelolaan Database
+### Pengelolaan Database
 
 ```markdown
 ## 6. Pengelolaan Database
@@ -143,7 +143,7 @@ CREATE TABLE mahasiswa (
 );
 
 ```
-### 7. State Management dengan Session
+### State Management dengan Session
 
 ```markdown
 ## 7. State Management dengan Session
@@ -162,7 +162,7 @@ echo $_SESSION['username'];
 
 ```
 
-### 8. Pengelolaan State dengan Cookie dan Browser Storage
+### Pengelolaan State dengan Cookie dan Browser Storage
 
 ```markdown
 ## 8. Pengelolaan State dengan Cookie dan Browser Storage
@@ -181,3 +181,62 @@ function getCookie(name) {
 }
 
 console.log(getCookie("user"));
+
+```
+# Bagian Bonus: Hosting Aplikasi Web (Bobot: 20%)
+
+## Apa langkah-langkah yang Anda lakukan untuk meng-host aplikasi web Anda? (5%)
+
+Langkah-langkah yang saya lakukan untuk meng-host aplikasi web adalah sebagai berikut:
+
+1. **Konfigurasi dan Upload Database**  
+   Langkah pertama adalah mengonfigurasi database pada server yang sesuai dengan konfigurasi yang ada pada lingkungan lokal. Saya membuat database baru dan mengekspor file SQL dari database lokal untuk diimpor ke server hosting.
+
+2. **Upload File Aplikasi**  
+   Setelah database dikonfigurasi, saya meng-upload semua file aplikasi yang terdiri dari PHP, JavaScript, dan CSS menggunakan FTP atau File Manager di cPanel ke direktori yang sesuai di server.
+
+3. **Periksa Koneksi Database**  
+   Setelah file dan database di-upload, saya melakukan uji coba koneksi antara aplikasi dan database untuk memastikan aplikasi dapat mengakses data dengan benar.
+
+4. **Uji Aplikasi di Server**  
+   Setelah semua file dan database tersedia di server, saya melakukan pengujian aplikasi untuk memastikan semua fitur berfungsi seperti yang diharapkan, termasuk form input, pengiriman data, dan pemrosesan dengan PHP.
+
+5. **Aktifkan HTTPS**  
+   Saya mengonfigurasi SSL (Secure Sockets Layer) untuk mengenkripsi komunikasi antara pengguna dan server. Hal ini penting untuk melindungi data sensitif yang dikirimkan melalui aplikasi.
+
+## Pilih penyedia hosting web yang menurut Anda paling cocok untuk aplikasi web Anda. (5%)
+
+Saya memilih **Infinity Hosting** sebagai penyedia hosting untuk aplikasi web ini karena beberapa alasan berikut:
+
+- **Fitur Lengkap**: Infinity Hosting menyediakan berbagai fitur yang mendukung pengembangan web, seperti PHP, MySQL, FTP, dan pengelolaan database yang mudah.
+  
+- **Harga Gratis**: Infinity Hosting menawarkan layanan hosting gratis dengan kapasitas yang cukup untuk kebutuhan aplikasi kecil, yang sangat berguna untuk proyek-proyek pribadi dan pengembangan aplikasi berbasis web.
+
+- **Support yang Baik**: Layanan hosting ini juga dilengkapi dengan dukungan teknis yang cukup responsif, yang sangat penting bagi pengelolaan aplikasi web.
+
+## Bagaimana Anda memastikan keamanan aplikasi web yang Anda host? (5%)
+
+Keamanan aplikasi web adalah aspek yang sangat penting. Meskipun aplikasi ini sudah dikerjakan dengan beberapa langkah dasar, ada beberapa area yang perlu diperbaiki untuk meningkatkan keamanannya. Beberapa langkah yang sudah dan belum dilakukan adalah:
+
+- **Sanitasi Input**  
+  Sejauh ini, input dari pengguna belum disanitasi dengan benar, yang membuka potensi risiko terhadap serangan **SQL Injection** dan **Cross-site Scripting (XSS)**. Sanitasi input penting untuk memastikan data yang dimasukkan oleh pengguna tidak membahayakan aplikasi dan database.
+
+## Jelaskan konfigurasi server yang Anda terapkan untuk mendukung aplikasi web Anda. (5%)
+
+Konfigurasi server yang saya terapkan untuk mendukung aplikasi web adalah sebagai berikut:
+
+1. **Server Web (Apache)**  
+   Menggunakan server Apache untuk menangani permintaan HTTP. Apache adalah server web yang sangat populer dan mendukung berbagai modul PHP yang diperlukan untuk menjalankan aplikasi web berbasis PHP.
+
+2. **PHP dan MySQL**  
+   Untuk memproses permintaan dinamis dan menyimpan data, server diatur untuk mendukung **PHP 7.x atau lebih tinggi** dan **MySQL** sebagai sistem manajemen basis data yang digunakan untuk menyimpan informasi aplikasi.
+
+3. **SSL/TLS**  
+   Menggunakan sertifikat SSL untuk mengenkripsi data yang dikirimkan antara pengguna dan server, guna menjaga keamanan data yang sensitif (seperti password dan informasi pribadi).
+
+4. **Backup Rutin**  
+   Mengonfigurasi server untuk melakukan backup secara rutin terhadap file aplikasi dan database untuk memastikan data tidak hilang jika terjadi kegagalan sistem atau masalah lainnya.
+
+5. **Pengaturan Firewall**  
+   Server dilindungi dengan firewall untuk mencegah akses yang tidak sah dan melindungi aplikasi dari potensi serangan seperti DDoS (Distributed Denial-of-Service).
+
